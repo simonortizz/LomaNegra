@@ -1,0 +1,776 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.fondo img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* HEADER */
+
+
+
+
+/*nav {
+    background-color: rgba(0, 33, 82, .5);
+    height: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.secciones {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}    
+.logo {
+    width: 30%;
+}
+a{
+    text-decoration: none;
+}
+a:link {
+    color:white;
+}
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color:rgb(77, 77, 146);
+}
+
+
+
+
+
+/* SECTION - ARTICLE */
+/*.estadio {
+    width: 100%;
+    height: 800px;
+}
+
+h1 {
+    
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 600px;
+}
+
+p{
+    
+    margin-left: 5px;
+}
+
+.jugadores {
+    width: 400px;
+    height: 400px;
+    margin-left:500px;
+}
+
+h3 {
+    
+    margin-left: 5px;
+}
+
+
+
+
+
+/* ASIDE */
+/*.aside {
+    background-color: #1C4871;
+    width: 400px;
+    height: 700px;
+    color:white;
+    margin-left: 5px;
+}    
+
+.aside p {
+    padding: 15px;
+}
+
+
+
+iframe {
+    width: 100%;
+}
+
+
+/* FOOTER */
+/*footer {
+    background-color: #569EEF;
+    height: 85px;
+}
+
+.footer__secciones {
+    display: inline;
+    padding: 20px;
+}
+
+.twitter {
+    width: 3.5%;
+}
+.facebook {
+    width: 3.5%;
+}
+.instagram {
+    width:3.5%;
+    
+}
+
+.copyright {
+    color: white;
+    text-align: right;
+    margin-right: 25px;
+}
+
+/* PRIMERA*/
+/*.tablaPrimera {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left:600px;
+}
+
+
+/* RESERVA */
+/*.tablaReserva {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left:600px;
+}
+
+
+/* GALERIA */
+/*.galeria img {
+    width: 30%;
+    padding: 100px;
+}
+
+
+/* CONTACTO */
+/*.form {
+    background-color: #033E4A;
+    width: 400px;
+    margin-left: 600px;
+    margin-bottom: 15px;    
+}
+
+input {
+    width: 386px;
+    background-color: #00565B;
+    border-bottom: solid 1px white;
+    outline: none;
+    color: white;
+    padding: 5px;
+}
+
+input:hover {
+    background-color: #269AA1;
+}
+
+::placeholder{
+    color:#D7E1F0
+}
+
+
+textarea {
+    width: 398px;
+    background-color: #00565B;
+    color: white;
+    resize: none;
+}
+
+.enviar {
+    width: 100px;
+    margin-left:140px;
+}
+
+/* FIXTURE */
+/*.fixture {
+    margin-top: 15px;
+    padding: 20px;
+    border: solid 5px rgba(0, 33, 82, .5);
+    background-color: rgba(0, 66, 90, .5);
+    color: white;
+}
+
+
+
+.fixture h3 {
+    margin-left: 0px;
+    padding: 0px;
+} */
+
+
+
+
+
+
+/*----COMIENZO ENTREGA GRID---- */
+
+    
+    /* ----EDICIONES GENERALES (NAV Y FOOTER)---- */
+    #menuBurger {
+        display: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #7C99DB;
+    }
+
+    header {
+        background-image: url("fondoLomaNegra.jpg");
+        height: 250px;
+    }
+
+
+    #navegador {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(9, 37, 104, .8);
+        position: sticky;
+        top: 0;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        font-size: 25px;
+        padding-right: 40px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color: #6DABC6;
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    #navegador img {
+        width: 80px;
+    }
+
+    .redes {
+        display: inline-block;
+        display: flex;
+    }
+
+    .redes img {
+        width: 50px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(13, 90, 123, .9);
+    }
+
+    /* -------EDICIONES INDEX------- */
+
+    
+
+    .grid_container_index {
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "section-index section-index aside-index"
+        "section-index section-index aside-index"
+        "iframe iframe iframe"
+        "footer footer footer"
+        ;
+        row-gap: 0;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    
+    #navegador {
+        grid-area: nav;
+    }
+
+    .section-index {
+        grid-area: section-index;
+        margin: 10px;
+    }
+
+
+    .aside-index {
+        grid-area: aside-index;
+        background-color: rgba(9, 37, 104);
+        color:white;
+        width: 200px;
+        text-align: center;
+        margin: 10px;
+        padding: 40px;
+    }
+
+    .iframe {
+        grid-area: iframe;
+        margin: 10px;
+        width: 100%;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    .article-index h1 {
+        text-align: center;
+        font-size: 35px;
+        margin: 10px 0;
+    }
+
+    .jugadores {
+        width: 440px;
+    }
+
+
+
+    /* ------EDICIONES PRIMERA----- */
+    
+    .grid_container_primera {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "section-primera section-primera section-primera"
+        "footer footer footer";
+    }
+
+    .section-primera {
+        grid-area: section-primera;
+        margin: 25px 0;
+    }
+
+    .article-primera {
+        display: grid;
+        justify-items: center;
+    }
+
+    .article-primera h1 {
+        font-size: 40px;
+        margin: 15px 0;
+    }
+
+    .tablaPrimera {
+        font-size: 20px;
+        background-color: white;
+    }
+
+
+    /* ------EDICIONES RESERVA----- */
+    
+    .grid_container_reserva {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "section-reserva section-reserva section-reserva"
+        "footer footer footer";
+    }
+
+    .section-reserva {
+        grid-area: section-reserva;
+        margin: 25px 0;
+    }
+
+    .article-reserva {
+        display: grid;
+        justify-items: center;
+    }
+
+    .article-reserva h1 {
+        font-size: 40px;
+        margin: 15px 0;
+    }
+
+    .tablaReserva {
+        font-size: 20px;
+        background-color: white;
+    }
+
+
+    /* ------EDICIONES GALERIA------ */
+
+    .grid_container_galeria {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "galeria-main galeria-main galeria-main"
+        "footer footer footer";
+    }
+
+    .galeria-main {
+        grid-area: galeria-main;
+    }
+
+    .galeria-main img {
+        width: 30%;
+        padding: 15px;
+    }
+
+    .galeria-main img:hover {
+        transform: scale(1.3);
+        transition: all 1s;
+    }
+
+    .galeria-main h1 {
+        text-align: center;
+        font-size: 40px;
+        margin: 15px 0;
+    }
+
+
+    /* ------EDICIONES CONTACTO----- */
+
+    .grid_container_contacto {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "section-contacto section-contacto section-contacto"
+        "footer footer footer";
+    }
+
+    .section-contacto {
+        grid-area: section-contacto;
+        display: grid;
+        justify-items: center;
+    }
+
+    .section-contacto h1 {
+        margin: 20px 0;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .form {
+        background-color: #033E4A;
+        width: 800px;
+        margin-bottom: 15px; 
+        height: 500px;   
+    }
+    
+    input {
+        width: 100%;
+        height: 80px;
+        background-color: #00565B;
+        border-bottom: solid 1px white;
+        outline: none;
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+    }
+    
+    input:hover {
+        background-color: #269AA1;
+    }
+    
+    ::placeholder{
+        color:#D7E1F0
+    }
+    
+    
+    textarea {
+        width: 100%;
+        height: 80px;
+        background-color: #00565B;
+        color: white;
+        resize: none;
+        font-size: 15px;
+    }
+    
+    .enviar {
+        width: 100px;
+        height: 40px;
+        margin-left: 350px;
+    }
+
+
+    /* -----EDICIONES FIXTURE----- */
+
+    .grid_container_fixture {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "section-fixture section-fixture"
+        "footer footer";
+    }
+
+    .section-fixture {
+        grid-area: section-fixture;
+    }
+
+    .section-fixture h1{
+        text-align: center;
+        margin: 15px 0;
+        font-size: 40px;
+    }
+
+    .fixture {
+        padding: 20px;
+        width: 500px;
+        border: solid 5px rgba(0, 33, 82, .5);
+        background-color: rgba(0, 66, 90, .5);
+        color: white;
+    }
+
+    .fixture:hover {
+        background-color: rgba(0, 33, 82, .6);
+        transform: scale(1.2);
+        transition: all 1.3s;
+    }
+
+    .fixture li {
+        list-style: none;
+    }
+    
+    .article-fixture {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(6,auto);
+        row-gap: 15px;
+        column-gap: 15px;
+        justify-content: space-evenly;
+    }
+
+
+
+        /* -------MOBILE------ */
+
+        @media screen and (max-width: 600px) {
+        
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            .logo, .nav-links {
+                display: none;
+            }
+    
+            #menuBurger {
+                display: block;
+            }
+    
+            footer img {
+                width: 50px;
+                height: auto; 
+            }
+    
+    
+    
+            /* -------EDCICIONES INDEX------ */
+    
+            .grid_container_index {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(6,auto);
+                grid-template-areas: 
+                "header"
+                "nav"
+                "section-index"
+                "aside-index"
+                "iframe"
+                "footer ";
+                font-size: 15px;
+                margin: 0;
+            }
+    
+            .jugadores {
+                width: 80px;
+            }
+    
+            .section-index h1 {
+                font-size: 25px;
+            }
+    
+            .iframe {
+                width: 95%;
+                margin-right: 0;
+            }
+    
+            .aside-index {
+                width: 100%;
+            }
+    
+    
+            /* ------EDICIONES PRIMERA------ */
+    
+            .grid_container_primera {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "section-primera"
+                "footer";
+            }
+    
+            .article-primera h1 {
+                font-size: 25px;
+            }
+    
+            .tablaPrimera {
+                font-size: 10px;
+            }
+    
+    
+            /* ------EDICIONES RESERVA------ */
+    
+            .grid_container_reserva {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "section-reserva"
+                "footer";
+            }
+    
+            .article-reserva h1 {
+                font-size: 25px;
+            }
+    
+            .tablaReserva {
+                font-size: 10px;
+            }
+    
+    
+            /* ------EDICIONES GALERIA------ */
+            
+            .grid_container_galeria {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "galeria-main"
+                "footer";
+            }
+    
+            .galeria-main {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(6,auto);
+                justify-items: center;
+            }
+    
+            .galeria-main h1 {
+                font-size: 15px;
+            }
+    
+            .galeria-main img {
+                width: 150px;
+            }
+    
+    
+            /* ------EDICIONES CONTACTO----- */
+    
+            .grid_container_contacto {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "section-contacto"
+                "footer";
+            }
+    
+            .section-contacto h1 {
+                font-size: 25px;
+            }
+    
+            .section-contacto form {
+                width: 300px;
+            }
+    
+            .enviar {
+                margin: 0;
+            }
+    
+    
+            /* ------EDICIONES FIXTURE------ */
+    
+            .grid_container_fixture {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                "header
+                "nav"
+                "section-fixture"
+                "footer";
+            }
+    
+            .article-fixture {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-areas: repeat(10,auto);
+            }
+    
+            .section-fixture h1 {
+                font-size: 25px;
+            }
+    
+            .fixture {
+                width: 150px;
+            }
+        }
+
+
+
+
+
+
+
+
+    
+
+    
